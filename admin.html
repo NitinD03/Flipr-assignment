@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <div class="admin-container">
+        <nav class="admin-nav">
+            <div class="logo">CMD Admin</div>
+            <ul>
+                <li><a href="index.html">Landing Page</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#contacts">Contact Forms</a></li>
+                <li><a href="#emails">Subscribed Emails</a></li>
+            </ul>
+        </nav>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="projects">Projects</button>
+            <button class="tab-btn" data-tab="clients">Clients</button>
+            <button class="tab-btn" data-tab="contacts">Contact Forms</button>
+            <button class="tab-btn" data-tab="emails">Subscribed Emails</button>
+        </div>
+
+        <div id="projects" class="tab-content active">
+            <div class="form-section">
+                <h3>Add Project</h3>
+                <form id="project-form">
+                    <div class="form-group">
+                        <label>Project Name</label>
+                        <input type="text" id="project-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Project Description</label>
+                        <textarea id="project-desc" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Project Image</label>
+                        <input type="file" id="project-image" accept="image/*" required>
+                        <div class="cropper-container" id="project-cropper"></div>
+                        <button type="button" id="crop-project-image" style="display:none;">Crop Image</button>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Add Project</button>
+                    </div>
+                </form>
+            </div>
+            <div class="list-section">
+                <h3>Project List</h3>
+                <table id="project-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="clients" class="tab-content">
+            <div class="form-section">
+                <h3>Add Client</h3>
+                <form id="client-form">
+                    <div class="form-group">
+                        <label>Client Name</label>
+                        <input type="text" id="client-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Client Description</label>
+                        <textarea id="client-desc" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Client Designation</label>
+                        <input type="text" id="client-designation" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Client Image</label>
+                        <input type="file" id="client-image" accept="image/*" required>
+                        <div class="cropper-container" id="client-cropper"></div>
+                        <button type="button" id="crop-client-image" style="display:none;">Crop Image</button>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Add Client</button>
+                    </div>
+                </form>
+            </div>
+            <div class="list-section">
+                <h3>Client List</h3>
+                <table id="client-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Designation</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="contacts" class="tab-content">
+            <div class="list-section">
+                <h3>Contact Form Submissions</h3>
+                <table id="contact-table">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="emails" class="tab-content">
+            <div class="list-section">
+                <h3>Subscribed Emails</h3>
+                <table id="email-table">
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+</body>
+</html>
